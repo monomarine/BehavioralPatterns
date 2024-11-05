@@ -10,14 +10,14 @@ namespace Memento
     /// <summary>
     /// категории учеток пользователей: админская, обычная и гостевая
     /// </summary>
-    enum UserRole { Admin, User, Guest}
+    enum UserRole { Admin, User, Guest }
 
     internal class User
     {
         private string _login;
-        private string _password;  
+        private string _password;
         private UserRole _role;
-       
+
 
         public string Login { get => _login; }
         public string Password
@@ -43,6 +43,9 @@ namespace Memento
             Role = role;
         }
 
+        private void DeleteVce() {
+            Console.WriteLine("предалагаю удалить все!!!!!!!!!!!!!!!!!!!");
+        }
         #region реализация паттерна
 
         private Caretaker _caretacker = new Caretaker(); //закрытое поле для управления доступом к снимку состояния

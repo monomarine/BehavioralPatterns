@@ -18,6 +18,7 @@
             //смена состояния на заблокированное
             user.ChangeState(new BannedState());
             user.SendMessage("Hello!");
+            Console.WriteLine("привет, как дела?");
         }
     }
 }

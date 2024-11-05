@@ -12,6 +12,7 @@
             Console.WriteLine();
 
             salad.OrderDish();
+            Console.WriteLine( "помогите!!!!!");
         }
     }
 }

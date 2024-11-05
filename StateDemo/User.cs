@@ -10,6 +10,7 @@ namespace StateDemo
     {
         private string _login;
         private string _password;
+        private DateOnly _birthday;
         
 
         public string Login { get => _login; }
@@ -23,11 +24,12 @@ namespace StateDemo
             }
         }
 
-        public User(string login, string password, IState state)
+        public User(string login, string password, IState state, DateOnly birthday)
         {
             _login = login;
             Password = password;
-            _state=state;
+            _state = state;
+            _birthday = birthday;
         }
 
         public override string ToString()

@@ -14,7 +14,7 @@
             снимок сохраняется в памяти так, что доступ других объектов к нему невозможен
              */
             
-            User user = new User("ivan", "54654321");
+            User user = new User("Roman", "44444444");
             Console.WriteLine(user.Role);
             user.SaveState(); //сохранение текущего состояния пользователя (внутри закрытого поля _caretacker)
 
@@ -26,6 +26,8 @@
 
             user.LoadState(); //восстановление сохраненного состояния
             Console.WriteLine(user.Role);
+
+            Console.WriteLine("Это изменения, так небыло");
         }
     }
 }

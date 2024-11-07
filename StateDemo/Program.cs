@@ -8,6 +8,7 @@
         static void Main(string[] args)
         {
             //создание объекта с активным состоянием
+            User user1 = new User("Luka","12345678", new ActiveState());
             User user = new User("petrov", "654656", new ActiveState());
             user.SendMessage("hello!");
 

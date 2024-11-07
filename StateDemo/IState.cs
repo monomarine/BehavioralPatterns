@@ -40,7 +40,7 @@ namespace StateDemo
         public void SendMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("пользователь не имеет права отправить сообщение");
+            Console.WriteLine("пользователь не имеет прав");
             Console.ForegroundColor= ConsoleColor.White;
         }
         public override string ToString()

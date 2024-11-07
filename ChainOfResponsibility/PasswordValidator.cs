@@ -16,19 +16,19 @@ namespace ChainOfResponsibility
 
         public bool Validate(User user)
         {
-            if(String.IsNullOrEmpty(user.Password) || user.Password.Length <= 6)
+            if(String.IsNullOrEmpty(user.Password) || user.Password.Length <= 10)
             {
-                Console.WriteLine("пароль не соответствует требуемой длине");
+                Console.WriteLine("парольчик не соответствует требуемой длине:(");
                 return false;
             }
             if(!user.Password.Any(Char.IsDigit))
             {
-                Console.WriteLine("в пароле отсутствуют цифры");
+                Console.WriteLine("в парольчике отсутствуют цифры:(");
                 return false ;
             }
             if(!user.Password.Any(Char.IsUpper))
             {
-                Console.WriteLine("в пароле нет символов в верхнем регистре");
+                Console.WriteLine("в парольчике нет символов в верхнем регистре:(");
                 return false;
             }
             return _validator?.Validate(user) ?? true;

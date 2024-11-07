@@ -10,17 +10,17 @@ namespace TemplateMethodDemo
     {
         public override void Cook()
         {
-            Console.WriteLine("варим в турке");
+            Console.WriteLine("варим в турке кофе");
         }
 
         public override void PrepareIngridients()
         {
-            Console.WriteLine("измельчаем кофе");
+            Console.WriteLine("измельчаем кофе в дробилке");
         }
 
         public override void Serving()
         {
-            Console.WriteLine("рисуем сердечко корицей");
+            Console.WriteLine("рисуем сердечко корицей красиво");
         }
     }
 }

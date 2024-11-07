@@ -31,7 +31,7 @@ namespace ObserverDemo
         public void GenerateTem()
         {
             Random rnd = new Random();
-            _temperature = rnd.NextDouble() + rnd.Next(-30, 30);
+            _temperature = rnd.NextDouble() + rnd.Next(-40, 40);
             NotifyObservers();
         }
 

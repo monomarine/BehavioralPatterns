@@ -19,7 +19,7 @@
 
             bool resulr = loginValidator.Validate(user);
 
-            Console.WriteLine($"Вывод ролей зашедших:\n {resulr}");
+            Console.WriteLine($"Успешность регистрации:\n {resulr}");
         }
     }
 }

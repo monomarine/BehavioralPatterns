@@ -8,7 +8,7 @@ namespace ChainOfResponsibility
 {
     internal class PasswordValidator : IValidator
     {
-        private IValidator _validator;
+        private IValidator? _validator;
         public void SetNext(IValidator validator)
         {
             _validator = validator;
@@ -16,20 +16,25 @@ namespace ChainOfResponsibility
 
         public bool Validate(User user)
         {
-            if(String.IsNullOrEmpty(user.Password) || user.Password.Length <= 6)
+            string? password = user.Password;
+            if(String.IsNullOrEmpty(password) || password.Length <= 6)
             {
                 Console.WriteLine("пароль не соответствует требуемой длине");
                 return false;
             }
-            if(!user.Password.Any(Char.IsDigit))
+            if(!password.Any(Char.IsDigit))
             {
                 Console.WriteLine("в пароле отсутствуют цифры");
                 return false ;
             }
-            if(!user.Password.Any(Char.IsUpper))
+            if(!password.Any(Char.IsUpper))
             {
                 Console.WriteLine("в пароле нет символов в верхнем регистре");
                 return false;
+            }
+            if (password.Any(Char.IsWhiteSpace))
+            {
+                Console.WriteLine("В пароле не может присутствовать пробел");
             }
             return _validator?.Validate(user) ?? true;
         }

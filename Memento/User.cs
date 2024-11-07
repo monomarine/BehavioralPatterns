@@ -65,7 +65,10 @@ namespace Memento
         {
             Role = role;
         }
-
+        public override string ToString()
+        {
+            return $"Login - {Login}, email - {Email}";
+        }
         #region реализация паттерна
 
         private Caretaker _caretacker = new Caretaker(); //закрытое поле для управления доступом к снимку состояния

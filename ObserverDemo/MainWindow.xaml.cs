@@ -34,5 +34,9 @@ namespace ObserverDemo
         {
             weather.GenerateTem();
         }
+        private void Tap_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("а вот зачем нажимать? сказали, и сделал? а скажут с крыши прыгнуть, ты прыгнешь?");
+        }
     }
 }

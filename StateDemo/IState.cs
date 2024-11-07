@@ -22,9 +22,9 @@ namespace StateDemo
     {
         public void SendMessage(string message)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
-            Console.ForegroundColor= ConsoleColor.White;
+            Console.ForegroundColor= ConsoleColor.Blue;
         }
         public override string ToString()
         {
@@ -40,8 +40,8 @@ namespace StateDemo
         public void SendMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("пользователь не имеет права отправить сообщение");
-            Console.ForegroundColor= ConsoleColor.White;
+            Console.WriteLine("пользователь не может отправить сообщение");
+            Console.ForegroundColor= ConsoleColor.Blue;
         }
         public override string ToString()
         {
@@ -56,12 +56,12 @@ namespace StateDemo
         public void SendMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("сообщение поставлено в очередь");
+            Console.WriteLine("сообщение было поставлено в очередь");
             Console.ForegroundColor= ConsoleColor.White;
         }
         public override string ToString()
         {
-            return "ожидающий";
+            return "ожидайте";
         }
     }
 

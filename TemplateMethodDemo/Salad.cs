@@ -23,5 +23,10 @@ namespace TemplateMethodDemo
         {
             Console.WriteLine("выкладываем салат в салатник");
         }
+
+        public override void Topping()
+        {
+            Console.WriteLine("Ро желанию пользователя добавляем соус сырный или майнез");
+        }
     }
 }

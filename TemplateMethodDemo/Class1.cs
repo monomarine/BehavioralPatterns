@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace TemplateMethodDemo
 {
-    internal class Coffee : Dish
+    internal class Shawarma: Dish
     {
         public override void Cook()
         {
-            Console.WriteLine("варим в турке");
+            Console.WriteLine("Собираем шаурму");
         }
 
         public override void PrepareIngridients()
         {
-            Console.WriteLine("измельчаем кофе");
+            Console.WriteLine("жарим мясо, режем овощи");
         }
 
         public override void Serving()
         {
-            Console.WriteLine("рисуем сердечко корицей");
+            Console.WriteLine("рисуем сердечко кутчупом");
         }
 
         public override void Topping()
         {
-            Console.WriteLine("Добовляем по желанию пользователя шоколадный,ванильный топинг");
+            Console.WriteLine("Добовляем по желанию пользователя сырный или классический соус");
         }
     }
 }

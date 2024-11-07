@@ -19,7 +19,15 @@ namespace Memento
         private UserRole _role;
        
 
-        public string Login { get => _login; }
+        public string Login
+        {
+            get => _login;
+            set
+            {
+                if (value.Length > 1) _login = value;
+                else throw new ArgumentException("длина логина должна быть больше");
+            }
+        }
         public string Password
         {
             get => _password;

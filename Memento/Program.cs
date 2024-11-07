@@ -13,6 +13,7 @@
 
             снимок сохраняется в памяти так, что доступ других объектов к нему невозможен
              */
+            Console.WriteLine("Hello!!!" );
             
             User user = new User("ivan", "54654321");
             Console.WriteLine(user.Role);

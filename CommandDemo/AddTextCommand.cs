@@ -42,5 +42,13 @@ namespace CommandDemo
             }
 
         }
+
+        ///<summary>
+        ///Стирает весь текст
+        ///</summary>
+        public void Clean()
+        {
+            _textBox.Text = null;
+        }
     }
 }

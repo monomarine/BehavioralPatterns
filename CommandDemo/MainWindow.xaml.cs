@@ -45,5 +45,12 @@ namespace CommandDemo
         {
             _commandManager.Redo();
         }
+
+        private void cleaner_Click(object sender, RoutedEventArgs e)
+        {
+            AddTextCommand a = new AddTextCommand(textBox, "");
+            a.Clean();
+            _commandManager.Clean();
+        }
     }
 }

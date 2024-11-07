@@ -17,6 +17,7 @@ namespace Memento
         private string _login;
         private string _password;  
         private UserRole _role;
+        private string _email;
        
 
         public string Login { get => _login; }
@@ -27,6 +28,28 @@ namespace Memento
             {
                 if (value.Length > 5) _password = value;
                 else throw new ArgumentException("длина пароля не соответствует");
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                List<string> ending = new List<string>() {"gmail.com", "mail.ru"};
+                if (value.Length > 10 && value.Contains('@') && value.Count(x => x == '@') == 1 && ending.Any(substring => ending.Contains(substring)))
+                {
+                    _email = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Почта введена не верно");
+                    _email = "None";
+                   
+                }
+
             }
         }
         public UserRole Role { get => _role; set => _role = value; }
@@ -42,7 +65,10 @@ namespace Memento
         {
             Role = role;
         }
-
+        public override string ToString()
+        {
+            return $"Login - {Login}, email - {Email}";
+        }
         #region реализация паттерна
 
         private Caretaker _caretacker = new Caretaker(); //закрытое поле для управления доступом к снимку состояния

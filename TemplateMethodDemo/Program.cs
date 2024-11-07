@@ -12,6 +12,10 @@
             Console.WriteLine();
 
             salad.OrderDish();
+
+            Burger burger = new Burger();
+
+            burger.OrderDish();
         }
     }
 }

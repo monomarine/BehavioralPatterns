@@ -15,6 +15,7 @@
              */
             
             User user = new User("ivan", "54654321");
+            user.Email = "sasafsdfd@gmail.com";
             Console.WriteLine(user.Role);
             user.SaveState(); //сохранение текущего состояния пользователя (внутри закрытого поля _caretacker)
 
@@ -23,6 +24,8 @@
             
 
             user.ChangeRole(UserRole.User);
+            Console.WriteLine(user.Email);
+
 
             user.LoadState(); //восстановление сохраненного состояния
             Console.WriteLine(user.Role);

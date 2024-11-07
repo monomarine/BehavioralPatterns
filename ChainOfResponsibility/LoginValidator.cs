@@ -16,9 +16,9 @@ namespace ChainOfResponsibility
 
         public bool Validate(User user)
         {
-            if(String.IsNullOrEmpty(user.Login) || user.Login.Length < 3)
+            if(String.IsNullOrEmpty(user.Login) || user.Login.Length < 6)
             {
-                Console.WriteLine("длина имени пользователя не соответствует требованиям");
+                Console.WriteLine("длина имени пользователя не соответствует требованиям(6)");
                 return false;
             }
 

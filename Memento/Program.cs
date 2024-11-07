@@ -13,19 +13,19 @@
 
             снимок сохраняется в памяти так, что доступ других объектов к нему невозможен
              */
-            
+            Console.WriteLine("Проверка методов смены ролей пользователя:");
             User user = new User("ivan", "54654321");
-            Console.WriteLine(user.Role);
+            Console.WriteLine( $"{user.Role} - гость");
             user.SaveState(); //сохранение текущего состояния пользователя (внутри закрытого поля _caretacker)
 
             user.ChangeRole(UserRole.Admin); //смена роли пользователя
-            Console.WriteLine(user.Role);
+            Console.WriteLine($"{user.Role} - админ");
             
 
             user.ChangeRole(UserRole.User);
 
             user.LoadState(); //восстановление сохраненного состояния
-            Console.WriteLine(user.Role);
+            Console.WriteLine($"{user.Role} - гость");
         }
     }
 }

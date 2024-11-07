@@ -19,7 +19,7 @@
 
             bool resulr = loginValidator.Validate(user);
 
-            Console.WriteLine(resulr);
+            Console.WriteLine($"Успешность регистрации:\n {resulr}");
         }
     }
 }

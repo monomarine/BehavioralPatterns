@@ -32,6 +32,11 @@ namespace ChainOfResponsibility
                 return false;
             }
             return _validator?.Validate(user) ?? true;
+            if (!user.Password.Any(Char.IsLetter))
+            {
+                Console.WriteLine("в пароле нет букв");
+                return false;
+            }
         }
     }
 }

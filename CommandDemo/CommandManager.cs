@@ -53,5 +53,11 @@ namespace CommandDemo
                 _undoStack.Push(command);
             }
         }
+
+        public void Clean()
+        {
+            _redoStack.Clear();
+            _undoStack.Clear();
+        }
     }
 }

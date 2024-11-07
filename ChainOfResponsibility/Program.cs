@@ -19,6 +19,8 @@
 
             bool resulr = loginValidator.Validate(user);
 
+            Console.WriteLine("Здравствуйте! Елена Николаевна, это супер код");
+            Console.WriteLine("Код конечно супер, но оцените пожалуйста");
             Console.WriteLine(resulr);
         }
     }

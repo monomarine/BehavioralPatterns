@@ -15,7 +15,7 @@ namespace TemplateMethodDemo
 
         public override void PrepareIngridients()
         {
-            Console.WriteLine("Жарим катлету");
+            Console.WriteLine("Жарим катлетку");
         }
 
         public override void Serving()

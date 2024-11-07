@@ -8,7 +8,7 @@
             {
                 Login = "login98475",
                 Password = "kjfghK6dd",
-                Email = "example@mail.com"
+                Number = "89123459295"
 
             };
 

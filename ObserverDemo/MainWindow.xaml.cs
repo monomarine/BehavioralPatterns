@@ -16,6 +16,7 @@ namespace ObserverDemo
     /// </summary>
     public partial class MainWindow : Window
     {
+        Weather weather1 = new Weather();
         Weather weather = new Weather();
         CurrentTempWindow CurrentTempWindow = new CurrentTempWindow();
         AvergeTemperature AvergeTemperature = new AvergeTemperature();

@@ -26,6 +26,25 @@
 
             user.LoadState(); //восстановление сохраненного состояния
             Console.WriteLine(user.Role);
+            // это вот я сделал
+
+            Console.WriteLine("Введите свое имя");
+            string name = Console.ReadLine();
+            Console.WriteLine("Введите свой возраст");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age < 18)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Вы несовершеннолетний!!!");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Здравствуйте {name}");
+                Console.ResetColor();
+            }
         }
     }
 }

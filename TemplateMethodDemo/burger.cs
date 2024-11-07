@@ -20,7 +20,7 @@ namespace TemplateMethodDemo
 
         public override void Serving()
         {
-            Console.WriteLine("Собираем  бургер");
+            Console.WriteLine("Собираем бургер");
         }
     }
 }

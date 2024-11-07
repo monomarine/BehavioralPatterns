@@ -26,6 +26,11 @@
 
             user.LoadState(); //восстановление сохраненного состояния
             Console.WriteLine(user.Role);
+
+            Console.Write("Введите ваше имя: ");
+            string nameSy = Console.ReadLine(); 
+
+            Console.WriteLine($"Привет, {nameSy}!"); 
         }
     }
 }

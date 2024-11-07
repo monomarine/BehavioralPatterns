@@ -13,19 +13,31 @@
 
             снимок сохраняется в памяти так, что доступ других объектов к нему невозможен
              */
-            Console.WriteLine("Лучшему преподователю :3");
-            User user = new User("ivan", "54654321");
-            Console.WriteLine(user.Role);
-            user.SaveState(); //сохранение текущего состояния пользователя (внутри закрытого поля _caretacker)
+            Console.WriteLine("Сообщение лучшему преподавателю :3\n");
 
-            user.ChangeRole(UserRole.Admin); //смена роли пользователя
-            Console.WriteLine(user.Role);
-            
+            User user = new User("ivan3", "54654321");
 
-            user.ChangeRole(UserRole.User);
+            if (user.Login.Any(char.IsDigit))
+            {
+                Console.WriteLine("Ошибка: логин не должен содержать цифры");
+                Environment.Exit(0);
+            }
+            else
+            {
 
-            user.LoadState(); //восстановление сохраненного состояния
-            Console.WriteLine(user.Role);
+
+                Console.WriteLine($"Здравствуйте, {user.Login}, ваша роль: {user.Role}\n");
+                user.SaveState(); //сохранение текущего состояния пользователя (внутри закрытого поля _caretacker)
+
+                user.ChangeRole(UserRole.Admin); //смена роли пользователя
+                Console.WriteLine($"Ваша роль была изменена на {user.Role}\n");
+
+
+                user.ChangeRole(UserRole.User);
+
+                user.LoadState(); //восстановление сохраненного состояния
+                Console.WriteLine($"Возвращены изменения вашей роли, теперь ваша роль {user.Role}");
+            }
         }
     }
 }

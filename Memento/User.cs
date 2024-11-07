@@ -19,7 +19,16 @@ namespace Memento
         private UserRole _role;
        
 
-        public string Login { get => _login; }
+        public string Login 
+        { 
+            get => _login;
+            set
+            {
+                
+            }
+            
+            
+            }
         public string Password
         {
             get => _password;

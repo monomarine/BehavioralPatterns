@@ -8,7 +8,7 @@
         static void Main(string[] args)
         {
             //создание объекта с активным состоянием
-            User user = new User("petrov", "654656", new ActiveState());
+            User user = new User("ivanov", "654656", new ActiveState());
             user.SendMessage("hello!");
 
             //смена состояния на ожидающее

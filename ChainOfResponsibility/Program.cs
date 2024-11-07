@@ -20,6 +20,8 @@
             bool resulr = loginValidator.Validate(user);
 
             Console.WriteLine(resulr);
+
+        
         }
     }
 }

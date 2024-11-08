@@ -18,6 +18,9 @@
             //смена состояния на заблокированное
             user.ChangeState(new BannedState());
             user.SendMessage("Hello!");
+
+            user.ChangeState(new ActiveState());
+            user.SendMessage("снова привет, я активен"); // возвращение состояния на активное, после тех что выше
         }
     }
 }

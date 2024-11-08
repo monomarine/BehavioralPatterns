@@ -18,9 +18,14 @@ namespace TemplateMethodDemo
             Console.WriteLine("измельчаем кофе");
         }
 
+        public override void PourInCup()
+        {
+            Console.WriteLine("наливаем кофе в стакан");
+        }
         public override void Serving()
         {
             Console.WriteLine("рисуем сердечко корицей");
         }
+
     }
 }

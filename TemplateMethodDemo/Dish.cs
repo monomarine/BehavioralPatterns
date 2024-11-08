@@ -13,10 +13,12 @@ namespace TemplateMethodDemo
             PrepareIngridients();
             Cook();
             Serving();
+            PourInCup();
         }
 
         public abstract void PrepareIngridients();
         public abstract void Cook();
         public abstract void Serving();
+        public abstract void PourInCup();
     }
 }

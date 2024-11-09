@@ -14,6 +14,7 @@
 
             LoginValidator loginValidator = new LoginValidator();    
             PasswordValidator passwordValidator = new PasswordValidator();
+            EmailValidator emailValidator = new EmailValidator(); // Новый валидатор для проверки электронной почты
 
             loginValidator.SetNext(passwordValidator);
 
